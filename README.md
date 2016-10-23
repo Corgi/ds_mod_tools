@@ -23,6 +23,10 @@ Under Windows, the tools have no runtime dependencies other than those bundled w
 
 For Mac and Linux, a system wide installation of Python 2.7 is assumed, as well as the Python Imaging Library (PIL) or its backwards-compatible fork (Pillow). A system wide installation of the TEX converter ktech is also assumed.
 
+```
+sudo easy_install Pillow
+```
+
 Compilation instructions
 ============
 
@@ -46,8 +50,11 @@ Usage
 
 The tools were designed for being run by the autocompiler, which in turn was designed under the assumption the mod tools would be placed in a directory alongside Don't Starve's installation directory with the same structure as when installing them via Steam. In order to use the autocompiler, a folder structure such as this must be replicated (for example, under Windows, the folder placed at build/win32/mod_tools after compilation must be relocated in such a way that mod_tools/../../dont_starve is Don't Starve's installation directory).
 
-Alternatively, the scml compiler may be used directly. I takes two arguments: the first one is the path of the scml file to build and the second one is the path to the directory of the mod in which to place the final product (an anim/ folder is created within the mod's if it doesn't exist).
+Alternatively, the scml compiler may be used directly. It takes two arguments: the first one is the path of the scml file to build and the second one is the path to the directory of the mod in which to place the final product (an anim/ folder is created within the mod's if it doesn't exist).
 
-Todo
-============
-- setup better way for specifying frame numbers and durations
+To make scml easier to use, alias it as follows:
+```
+alias scml="~/Library/Application\ Support/Steam/SteamApps/common/Don\'t\ Starve\ Mod\ Tools/mod_tools/scml"
+```
+
+Substitute the part after ```scml=``` with the actual path of your SCML file.
